@@ -126,7 +126,7 @@ traceroute-visualizer/
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo>
+git clone https://github.com/Satvik-Singh-22/traceroute-visualizer.git
 cd traceroute-visualizer
 ````
 
@@ -291,25 +291,3 @@ sudo setcap cap_net_raw+ep backend/traceroute_cpp
 - Rishabh Kumar (2023436)
 - Sahil Amrawat (2023462)
 ````
-
----
-
-# 📦 **requirements.txt**
-
-Here is the correct list of Python dependencies used by your FastAPI backend.
-
-```txt
-fastapi
-uvicorn
-requests
-python-multipart
-````
-
-These cover:
-
-* FastAPI server
-* WebSockets
-* File uploads (optional)
-* GeoIP lookups via `requests`
-
----
