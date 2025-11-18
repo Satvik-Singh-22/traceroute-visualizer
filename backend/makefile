@@ -6,7 +6,6 @@ CXXFLAGS = -O2 -Wall -Wno-switch -Wno-unused-variable
 
 # Source files
 TRACER_SRC = tracer.cpp
-DNS_BASIC_SRC = dns_lookup_basic.cpp
 DNS_FULL_SRC = dns_lookup_full.cpp
 DNS_TOOL_SRC = dns_tool.cpp
 PING_SRC = ping_tool.cpp
@@ -30,8 +29,8 @@ $(TRACER_BIN): $(TRACER_SRC)
 ############################
 #  DNS TOOL (A, AAAA, MX, NS, TXT)
 ############################
-$(DNS_BIN): $(DNS_TOOL_SRC) $(DNS_BASIC_SRC) $(DNS_FULL_SRC)
-	$(CXX) $(CXXFLAGS) $(DNS_TOOL_SRC) $(DNS_BASIC_SRC) $(DNS_FULL_SRC) -o $(DNS_BIN) -lresolv
+$(DNS_BIN): $(DNS_TOOL_SRC) $(DNS_FULL_SRC)
+	$(CXX) $(CXXFLAGS) $(DNS_TOOL_SRC) $(DNS_FULL_SRC) -o $(DNS_BIN) -lresolv
 
 ############################
 #  PING TOOL (ICMP, real-time)
