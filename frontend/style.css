@@ -1,36 +1,105 @@
+/* General Styling */
 body {
-    font-family: Arial;
-    margin: 20px;
-    background: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A slightly more modern font */
+    margin: 0; /* Remove default margin */
+    padding: 20px;
+    background-color: #f4f7f6; /* Light, pleasant background */
+    color: #333;
 }
 
+h2, h3 {
+    color: #007bff; /* Primary color for headings */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* Input and Buttons Container */
+.controls {
+    display: flex;
+    gap: 10px; /* Space between elements */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#host {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Allows the input to take up available space */
+    max-width: 400px; /* Limit input width */
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+/* Map Styling */
 #map {
     height: 60vh;
     width: 100%;
     margin-top: 10px;
-    border: 2px solid #ccc;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff;
 }
 
+/* Table Styling */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px;
-    background: white;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for tables */
+    border-radius: 6px;
+    overflow: hidden; /* Ensures borders/shadows apply nicely */
 }
 
 th, td {
-    border: 1px solid #666;
-    padding: 8px;
+    border: 1px solid #e0e0e0; /* Lighter border */
+    padding: 12px 15px; /* More padding */
+    text-align: left;
 }
 
 th {
-    background-color: #eee;
+    background-color: #e9ecef; /* Light gray header */
+    color: #495057;
+    font-weight: 600;
 }
 
-button {
-    margin-left: 5px;
-    padding: 8px;
-    font-size: 14px;
-    cursor: pointer;
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Zebra striping for readability */
 }
 
+/* Ping Chart and Stats */
+#pingChart {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+#pingStats {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #28a745; /* A color that suggests 'success' or 'status' */
+    padding: 5px 0;
+}
