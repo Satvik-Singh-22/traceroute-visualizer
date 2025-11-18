@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+    background: #fafafa;
+}
+
+#map {
+    height: 60vh;
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #666;
+    padding: 8px;
+}
+
+th {
+    background-color: #eee;
+}
+
+button {
+    margin-left: 5px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+

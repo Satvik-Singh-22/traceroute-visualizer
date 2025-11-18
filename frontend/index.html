@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Diagnostic Tool</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+    <h2>Network Diagnostic Tool</h2>
+
+    <input id="host" placeholder="Enter domain e.g. google.com" size="40">
+    <button onclick="runTrace()">Run Traceroute</button>
+    <button onclick="lookupDNS()">DNS Lookup</button>
+
+    <div id="map"></div>
+
+    <!-- Traceroute Table -->
+    <h3>Traceroute Hop Details</h3>
+    <table id="hopTable">
+        <thead>
+            <tr>
+                <th>Hop</th>
+                <th>IP Address</th>
+                <th>RTT (ms)</th>
+                <th>City</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- DNS Results -->
+    <h3>DNS Records</h3>
+    <table id="dnsTable">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>Ping Test (Real-Time)</h3>
+<button onclick="startPing()">Start Ping</button>
+<button onclick="stopPing()">Stop</button>
+<canvas id="pingChart" width="400" height="150"></canvas>
+<p id="pingStats"></p>
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
